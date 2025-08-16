@@ -38,5 +38,5 @@ jobs:
           sudo apt install tightvncserver xfce4* -y
           mkdir ~/.vnc/
           echo startxfce4 > ~/.vnc/xstartup
-          vncserver &
+          Xvnc :1 -SecurityTypes None -geometry 1280x800 -depth 24 &
           echo yes | ssh -R 0:localhost:5901 serveo.net
